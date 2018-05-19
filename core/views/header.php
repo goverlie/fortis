@@ -138,5 +138,6 @@ use \core\libs as core;
 
 			<!-- Begin page content -->
 			<div class="container-fluid">
-				<pre><?=print_r($_SESSION,1);?></pre>
-				<pre><?=print_r($this->navigation->menuItems,1); ?></pre>
+				<pre>session <?=print_r($_SESSION,1);?></pre>
+				<pre>navigation item <?=print_r($this->navigation->menuItems,1); ?></pre>
+				<pre>loadedModules <?=print_r($this->navigation->loadedModules,1); ?></pre>

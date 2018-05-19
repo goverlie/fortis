@@ -11,7 +11,8 @@ class Navigation {
 		$this->_module = new Module();
 		
 		$this->menuItems = $this->_module->getUserModules(Session::get('user_id'));
-
+		//see what modules are loaded?
+		$this->loadedModules = $this->_module->loadModuleSettings(Session::get('user_id'));
 	}
 	
 	public function init () {}
