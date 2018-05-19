@@ -139,6 +139,8 @@ class User_Model extends core\Model {
 			return false;
 		}
 		*/
+		
+		/* Remove the user */
 		$this->db->delete(DB_TABLE_PREFIX . "users","user_id = $id");
 	}
 }

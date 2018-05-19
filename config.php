@@ -1,7 +1,7 @@
 <?php
 	//PATHS
 	// Always include a trailing slash for addresses
-	define('URL', 'https://fortis/');
+	define('URL', 'https://fortis:8890/');
 	define('LIBS','core/libs/');
 
 	//DB Config

@@ -25,7 +25,7 @@ use \core\libs as core;
 		<?php
 		// Based on session style apply the stylesheet
 		if ($this->theme->isThemeSet()) {
-			$theme = core\Session::get('theme_id') ?? 1; //PHP 7
+			$theme = core\Session::get('theme_id') ?: 1;
 			$theme = $this->theme->getTheme($theme);
 			echo $theme[0]['link'];
 		}
