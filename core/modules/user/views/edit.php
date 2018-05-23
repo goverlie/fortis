@@ -60,7 +60,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="lastname">Email</label>
+						<label for="email">Email</label>
 					</td>
 					<td>
 						<input type="text" name="email" id="email" value="<?=$this->user['email']?>" />
