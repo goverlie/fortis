@@ -64,10 +64,12 @@
 		$actionDelete = URL . 'user/delete/' . $value['user_id'];
 			echo '<td>';
 			echo '<div class="btn-group" role="group" aria-label="User Action Buttons">
-			<a data-user-id='.$value['user_id'].' href='.$actionEdit.'  class="btn btn-default btn-sm user-edit"><span class="glyphicon glyphicon-pencil"></span></a> <button data-user-id='.$value['user_id'].' data-action='.$actionDelete.' type="button" class="btn btn-default btn-sm user-delete"><span class="glyphicon glyphicon-trash"></span></button></div>';
+			<a data-user-id='.$value['user_id'].' href='.$actionEdit.'  class="btn btn-default btn-sm user-edit"><i class="fas fa-pencil-alt"></i></span></a> <button data-user-id='.$value['user_id'].' data-action='.$actionDelete.' type="button" class="btn btn-default btn-sm user-delete"><i class="fas fa-trash-alt"></i>
+
+			</button></div>';
 			echo '</td>';
 		//}
-			
+
 
 		echo '</tr>';
 	}

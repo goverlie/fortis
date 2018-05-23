@@ -18,6 +18,15 @@ class User extends core\Controller{
 		$this->view->renderCoreModule('user');
 		$this->view->render('footer');
 	}
+
+	public function settings() {
+		$this->view->title = "Settings";
+		$this->view->userList = $this->model->userList();
+		
+		$this->view->render('header');
+		$this->view->renderCoreModule('user','settings');
+		$this->view->render('footer');
+	}
 	
 	public function create() {
 		$data = array();

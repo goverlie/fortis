@@ -21,7 +21,7 @@ class Login_Model extends core\Model {
 
 			if($check_password === $data['password']) {
 				//log in
-				core\Session::set('theme_id',$data['theme_id']);
+				//core\Session::set('theme_id',$data['theme_id']);
 				core\Session::set('loggedIn', true);
 				core\Session::set('user_id',$data['user_id']);
 				core\Session::set('firstname',$data['firstname']);
