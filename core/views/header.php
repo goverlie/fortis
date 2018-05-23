@@ -76,6 +76,10 @@ use \core\libs as core;
 						<ul class="nav navbar-nav">
 							<?php if (!core\Session::get('loggedIn')) { ?>
 								<li><a href="<?=URL?>index">Home</a></li>
+						</ul>
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="<?=URL?>login">Login</a></li>
+								</ul>
 								<?php } ?>
 									<!-- Begin Logged In Menu -->
 									<?php if (core\Session::get('loggedIn')) {
@@ -102,29 +106,40 @@ use \core\libs as core;
 									<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
 									<?php
-					$themes = $this->theme->getAllThemes();
-					
-					foreach ($themes as $theme) {
-						echo '<li><a href="?theme=' . $theme['theme_id'] . '">' . $theme['common_name'];
-							if(core\Session::get('theme_id') == $theme['theme_id'])
-								echo '&nbsp;<span class="glyphicon glyphicon-ok"></span>';
-						echo '</a>';
-					}
-				?>
+										$themes = $this->theme->getAllThemes();
+										
+										foreach ($themes as $theme) {
+											echo '<li><a href="?theme=' . $theme['theme_id'] . '">' . $theme['common_name'];
+												if(core\Session::get('theme_id') == $theme['theme_id'])
+													echo '&nbsp;<span class="glyphicon glyphicon-ok"></span>';
+											echo '</a>';
+										}
+									?>
 								</ul>
 							</li>
-							<li><a href="<?=URL?>dashboard/logout">Logout, <?=core\Session::get('firstname')?></a></li>
+							<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="dropdownMenuLink">
+									<?=core\Session::get('firstname')?>
+									<span class="caret"></span>
+									</a>
+
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<li><a href="<?=URL?>user/settings">Settings</a></li>
+										<li><a href="<?=URL?>dashboard/logout">Logout</a></li>
+									</ul>
+								
+
+								
+								</ul>
+							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="<?=URL?>user">Users</a></li>
 						</ul>
 						<!-- End Logged In Menu -->
-						<?php } else {  ?>
-							<li class="divider"></li>
-							<li><a href="<?=URL?>login">Login</a></li>
-							<?php } ?>
-								</ul>
-								<!-- this is for search
+						<?php }?>
+					</ul>
+					<!-- this is for search
 		<form class="navbar-form navbar-left" role="search">
 		<div class="form-group">
 			<input type="text" class="form-control" placeholder="Search">
