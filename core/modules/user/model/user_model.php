@@ -14,7 +14,7 @@ class User_Model extends core\Model {
 	}
 	
 	public function getUser ($id) {
-		return $this->db->select1('SELECT user_id, username, firstname, lastname FROM ' . DB_TABLE_PREFIX . 'users WHERE user_id = :id', array(':id' => $id));
+		return $this->db->select1('SELECT user_id, username, firstname, lastname, email FROM ' . DB_TABLE_PREFIX . 'users WHERE user_id = :id', array(':id' => $id));
 	}
 	
 	public function create ($data) {
