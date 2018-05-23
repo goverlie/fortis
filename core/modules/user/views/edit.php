@@ -29,19 +29,6 @@
 						<input type="text" name="password" id="password" />
 					</td>
 				</tr>
-				<!--<tr>
-					<td>
-						<label for="role">Role</label>
-					</td>
-					<td>
-						<select id="role" name="permission_level">
-							<option value="0" <?php echo ($this->user['permission_level']==0 ? 'selected' : null); ?>>Admin</option>
-							<option value="1" <?php echo ($this->user['permission_level']==1 ? 'selected' : null); ?>>Reviewer</option>
-							<option value="2" <?php echo ($this->user['permission_level']==2 ? 'selected' : null); ?>>State Manager</option>
-							<option value="3" <?php echo ($this->user['permission_level']==3 ? 'selected' : null); ?>>Campus Manager</option>
-						</select>
-					</td>
-				</tr>-->
 				<tr>
 					<td>
 						<label for="firstname">Firstname</label>

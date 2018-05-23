@@ -50,9 +50,9 @@ class User extends core\Controller{
 		$data['user_id'] = $id;
 		$data['username'] = $_POST['username'];
 		$data['password'] = $_POST['password'];
-		//$data['permission_level'] = $_POST['permission_level'];
 		$data['firstname'] = $_POST['firstname'];
 		$data['lastname'] = $_POST['lastname'];
+		$data['email'] = $_POST['email'];
 	
 		$this->model->editSave($data);
 
