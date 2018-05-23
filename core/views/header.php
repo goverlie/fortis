@@ -140,4 +140,3 @@ use \core\libs as core;
 			<div class="container-fluid">
 				<pre>session <?=print_r($_SESSION,1);?></pre>
 				<pre>navigation item <?=print_r($this->navigation->menuItems,1); ?></pre>
-				<pre>loadedModules <?=print_r($this->navigation->loadedModules,1); ?></pre>

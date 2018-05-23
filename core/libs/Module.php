@@ -39,9 +39,12 @@ class Module {
 				ON ms.module_setting_id = ums.module_setting_id
 				WHERE ums.user_id = ' . $user_id . ' AND ums.module_setting_id = ms.module_setting_id AND ms.module_id = '.$module['module_id'].''
 				);
-				
+				$module['settings'] = array_replace($defaultSettings,$userSettings);
 			}
-			$module['settings'] = array_replace($defaultSettings,$userSettings);
+			else {
+				$module['setting'] = $defaultSettings;
+			}
+			
 			array_push($userModules,$module);
 		}
 		return $userModules;
