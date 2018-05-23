@@ -24,6 +24,8 @@ class Login_Model extends core\Model {
 				core\Session::set('theme_id',$data['theme_id']);
 				core\Session::set('loggedIn', true);
 				core\Session::set('user_id',$data['user_id']);
+				core\Session::set('firstname',$data['firstname']);
+				core\Session::set('lastname',$data['lastname']);
 				//Session::set('role',$data['permission_level']);
 				$this->db->update(DB_TABLE_PREFIX . 'users', $postData ,"`user_id` = {$data['user_id']}");
 				header('location: '.URL.'dashboard');

@@ -113,7 +113,7 @@ use \core\libs as core;
 				?>
 								</ul>
 							</li>
-							<li><a href="<?=URL?>dashboard/logout">Logout</a></li>
+							<li><a href="<?=URL?>dashboard/logout">Logout, <?=core\Session::get('firstname')?></a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="<?=URL?>user">Users</a></li>
